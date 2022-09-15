@@ -1,8 +1,10 @@
 package src;
 
-/*public class Capitalize  {
+import java.util.Scanner;
+
+/*public class Capitalize {
     public static void main(String[] args){
-       String str = "helloworld";
+        String str = "helloworld";
 
 // capitalize first letter
         String output = str.substring(0, 1).toUpperCase() + str.substring(1);
@@ -11,24 +13,20 @@ package src;
 
     }
 }*/
-import java.util.Scanner;
-
 public class Capitalize {
-    public static void main(String[] args) {
-        Scanner sc =new Scanner(System.in);
-        System.out.print("Enter String : ");
-        String s = sc.nextLine();
-        String newstr = "";
-
-        String[] str = s.split("\\s"); // splitting sentence into word converted to String array
-
-        for (String string : str) {
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter string: ");
+        String s = scanner.nextLine();
+        String newString = "";
+        String[] str = s.split("\\s");
+        for (String string: str){
             int length = string.length();
-            String firstchar = string.substring(0, 1);
-            String restchar = string.substring(1, length - 1);
-            String lastchar = Character.toString(string.charAt(length - 1));
-            newstr = newstr+firstchar.toUpperCase()+restchar+lastchar.toUpperCase()+" ";
+            String firstChar = string.substring(0, 1);
+            String restChar = string.substring(1, length-1);
+            String lastChar = Character.toString(string.charAt(length-1));
+            newString = newString+ firstChar.toUpperCase()+restChar+lastChar+" ";
         }
-        System.out.println(newstr);
-    }
+        System.out.println(newString);// Java String Exercises
+}
 }
